@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">billplease</string>
-    <string name="billcal">Bill Please!</string>
-    <string name="msg">Welcome! This app helps to calculate your biils!</string>
-    <string name="amt">Amount:</string>
-    <string name="numpax">Num of Pax:</string>
+    <string name="billcal">Bill Please</string>
+    <string name="msg">Welcome This app helps to calculate your biils</string>
+    <string name="amt">Amount</string>
+    <string name="numpax">Num of Pax</string>
     <string name="svcdisable"> No Service Charge</string>
     <string name="svcenable">Service Charge</string>
     <string name="gstenable">GST</string>
     <string name="gstdisable">No GST</string>
-    <string name="disc">Discount(%):</string>
+    <string name="disc">Discount</string>
     <string name="cash">Cash</string>
     <string name="paynow">PayNow</string>
-    <string name="pay">Payment:</string>
+    <string name="pay">Payment</string>
     <string name="split">Split</string>
     <string name="reset">Reset</string>
-    <string name="bill">Total Bill Amount:</string>
-    <string name="payable">Each Person Pays:</string>
+    <string name="bill">Total Bill Amount</string>
+    <string name="payable">Each Person Pays</string>
 </resources>
