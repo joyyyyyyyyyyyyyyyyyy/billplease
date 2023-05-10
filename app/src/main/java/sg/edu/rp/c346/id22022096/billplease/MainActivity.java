@@ -41,25 +41,26 @@ public class MainActivity extends AppCompatActivity {
         reset = findViewById(R.id.reset);
 
         split.setOnClickListener(v -> {
-            double newamt = 0.0;
-            if(amt.getText().toString().trim().length()!=0 && paxno.getText().toString().trim().length()!=0) {
-                double originalamt = Double.parseDouble(amt.getText().toString());
-                if (!svc.isChecked() && !gst.isChecked()) {
-                    newamt = originalamt;
-                } else if (svc.isChecked() && !gst.isChecked()) {
-                    newamt = originalamt*1.1;
-                } else if (!svc.isChecked() && gst.isChecked()) {
-                    newamt = originalamt*1.07;
-                } else {
-                    newamt = originalamt*1.17;
-                }
-            }
 
           //discount
-            if (disc.getText().toString().trim().length() !=0) {
-                double originalamt = Double.parseDouble(amt.getText().toString());
-                newamt = originalamt * (1-Double.parseDouble(disc.getText().toString()) / 100);
-          }
+            double newamt = 0.0;
+
+            if(amt.getText().toString().trim().length()!=0 && paxno.getText().toString().trim().length()!=0) {
+                if (!svc.isChecked() && !gst.isChecked()) {
+                    newamt = Double.parseDouble(amt.getText().toString());
+                } else if (svc.isChecked() && !gst.isChecked()) {
+                    newamt = Double.parseDouble(amt.getText().toString())*1.1;
+                } else if (!svc.isChecked() && gst.isChecked()) {
+                    newamt = Double.parseDouble(amt.getText().toString())*1.07;
+                } else {
+                    newamt = Double.parseDouble(amt.getText().toString())*1.17;
+                }
+
+                if (disc.getText().toString().trim().length() !=0) {
+                    newamt *= (1-Double.parseDouble(disc.getText().toString()) / 100);
+                }
+
+            }
 
             String method = " in cash";
             if (payment.getCheckedRadioButtonId() == R.id.radiobtnpaynow) {
